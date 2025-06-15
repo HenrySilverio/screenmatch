@@ -7,6 +7,12 @@ public class Main {
         myMovie.yearOfRelease = 2023;
         myMovie.durationInMinutes = 120;
 
-        System.out.println("Movie: " + myMovie.title);
+        myMovie.showTecnicalDetails();
+        myMovie.isPlanAvailable = true;
+        myMovie.evaluate(4.5);
+        myMovie.evaluate(3.8);
+        System.out.println("Sum Assessment: " + myMovie.sumAssessment);
+        System.out.println("Total of Assessment: " + myMovie.totalAssessment);
+        System.out.println("Average Assessment: " + myMovie.getMedia());
     }
 }
