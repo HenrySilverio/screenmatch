@@ -1,18 +1,20 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import br.com.henrique.screenmatch.models.Movie;
+
+
 public class Main {
     public static void main(String[] args) {
         Movie myMovie = new Movie();
-        myMovie.title = "The Grand Fatther";
-        myMovie.yearOfRelease = 2023;
-        myMovie.durationInMinutes = 120;
+
+        myMovie.setTitle("The Grand Fatther");
+        myMovie.setYearOfRelease(2023);
+        myMovie.setDurationInMinutes(120);
+        myMovie.setPlanAvailable(true);
 
         myMovie.showTecnicalDetails();
-        myMovie.isPlanAvailable = true;
         myMovie.evaluate(4.5);
         myMovie.evaluate(3.8);
-        System.out.println("Sum Assessment: " + myMovie.sumAssessment);
-        System.out.println("Total of Assessment: " + myMovie.totalAssessment);
-        System.out.println("Average Assessment: " + myMovie.getMedia());
+        myMovie.evaluate(5.0);
+
+        System.out.println("Media de avaliacoes do filme: " + myMovie.getMedia());
     }
 }
