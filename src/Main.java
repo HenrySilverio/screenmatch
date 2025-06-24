@@ -39,6 +39,7 @@ public class Main {
         TimeCalculator timeCalculator = new TimeCalculator();
         timeCalculator.include(myMovie);
         timeCalculator.include(myMovie2);
+        timeCalculator.include(lost);
         System.out.println(timeCalculator.getTotalTime());
     }
 }
