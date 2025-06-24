@@ -1,4 +1,5 @@
 import br.com.henrique.screenmatch.models.Movie;
+import br.com.henrique.screenmatch.models.Series;
 
 
 public class Main {
@@ -16,5 +17,13 @@ public class Main {
         myMovie.evaluate(5.0);
 
         System.out.println("Media de avaliacoes do filme: " + myMovie.getMedia());
+
+        //chama classe Series
+        Series lost = new Series();
+        lost.setTitle("Lost");
+        lost.setYearOfRelease(2000);
+        lost.showTecnicalDetails();
+        lost.setTemporadas(10);
+        lost.setEpisodiosPorTemporada(10);
     }
 }
