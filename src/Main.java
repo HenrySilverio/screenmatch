@@ -1,3 +1,4 @@
+import br.com.henrique.screenmatch.calculos.TimeCalculator;
 import br.com.henrique.screenmatch.models.Movie;
 import br.com.henrique.screenmatch.models.Series;
 
@@ -10,6 +11,13 @@ public class Main {
         myMovie.setYearOfRelease(2023);
         myMovie.setDurationInMinutes(120);
         myMovie.setPlanAvailable(true);
+
+        Movie myMovie2 = new Movie();
+        myMovie2.setTitle("Avatar: The Way of Water");
+        myMovie2.setYearOfRelease(2022);
+        myMovie2.setDurationInMinutes(192);
+        myMovie2.setPlanAvailable(true);
+
 
         myMovie.showTecnicalDetails();
         myMovie.evaluate(4.5);
@@ -24,6 +32,13 @@ public class Main {
         lost.setYearOfRelease(2000);
         lost.showTecnicalDetails();
         lost.setTemporadas(10);
+        lost.setMinutesPerEpisode(50);
         lost.setEpisodiosPorTemporada(10);
+        System.out.println("Total de minutos da série: " + lost.getDurationInMinutes());
+
+        TimeCalculator timeCalculator = new TimeCalculator();
+        timeCalculator.include(myMovie);
+        timeCalculator.include(myMovie2);
+        System.out.println(timeCalculator.getTotalTime());
     }
 }
