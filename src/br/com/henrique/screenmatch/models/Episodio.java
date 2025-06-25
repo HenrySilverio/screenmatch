@@ -42,7 +42,7 @@ public class Episodio implements Classification {
 
     @Override
     public int getClassification() {
-        if (totalVisualizacoes >100) {
+        if (totalVisualizacoes > 100) {
             return 4;
         } else {
             return 0;

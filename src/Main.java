@@ -1,5 +1,6 @@
 import br.com.henrique.screenmatch.calculos.FiltroRecomendacao;
 import br.com.henrique.screenmatch.calculos.TimeCalculator;
+import br.com.henrique.screenmatch.models.Episodio;
 import br.com.henrique.screenmatch.models.Movie;
 import br.com.henrique.screenmatch.models.Series;
 
@@ -46,5 +47,13 @@ public class Main {
         FiltroRecomendacao filtroRecomendacao = new FiltroRecomendacao();
         filtroRecomendacao.filtra(myMovie);
         filtroRecomendacao.filtra(myMovie2);
+
+        Episodio episodio = new Episodio();
+        episodio.setId(1);
+        episodio.setNome("Pilot");
+        episodio.setSeries(lost);
+        episodio.setTotalVisualizacoes(150);
+        filtroRecomendacao.filtra(episodio);
     }
+
 }
