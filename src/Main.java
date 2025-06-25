@@ -1,3 +1,4 @@
+import br.com.henrique.screenmatch.calculos.FiltroRecomendacao;
 import br.com.henrique.screenmatch.calculos.TimeCalculator;
 import br.com.henrique.screenmatch.models.Movie;
 import br.com.henrique.screenmatch.models.Series;
@@ -20,9 +21,9 @@ public class Main {
 
 
         myMovie.showTecnicalDetails();
-        myMovie.evaluate(4.5);
-        myMovie.evaluate(3.8);
-        myMovie.evaluate(5.0);
+        myMovie.evaluate(8.5);
+        myMovie.evaluate(6.8);
+        myMovie.evaluate(9.0);
 
         System.out.println("Media de avaliacoes do filme: " + myMovie.getMedia());
 
@@ -41,5 +42,9 @@ public class Main {
         timeCalculator.include(myMovie2);
         timeCalculator.include(lost);
         System.out.println(timeCalculator.getTotalTime());
+
+        FiltroRecomendacao filtroRecomendacao = new FiltroRecomendacao();
+        filtroRecomendacao.filtra(myMovie);
+        filtroRecomendacao.filtra(myMovie2);
     }
 }
